@@ -5,6 +5,6 @@ import com.bdtss.holidayeveryday.domain.entity.Holiday
 import retrofit2.http.GET
 
 interface HolidaysApi {
-    @GET("/api/v3/PublicHolidays/2023/{countryCode}")
+    @GET("/api/v3/PublicHolidays/2023/{countryCode}") // TODO: изменить год
     suspend fun getAll(countryCode: String): List<Holiday>
 }

@@ -16,7 +16,7 @@ abstract class RepositoryImpl {
     }
 
     private val gson = GsonBuilder().create()
-    protected val retrofit = Retrofit.Builder()
+    protected val retrofit: Retrofit = Retrofit.Builder()
         .client(provideOkHttpClientWithProgress())
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create(gson))
